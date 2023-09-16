@@ -34,7 +34,7 @@ public class Stack {
             top--;
             return poppedElement;
         } else {
-            System.out.println("Pila vacía, no se puede hacer pop.");
+             System.out.println("Pila vacía, no se puede hacer pop.");
             return -1; // Valor de retorno de error
         }
     }
@@ -49,7 +49,6 @@ public class Stack {
             System.out.println("La pila está vacía.");
         }
     }
-
     public static void main(String[] args) {
         Stack pila = new Stack(5);
 

@@ -59,3 +59,5 @@ console.log("Elemento pop:", pila.pop());
 console.log("Elemento pop:", pila.pop());
 
 pila.mostrar();
+
+
