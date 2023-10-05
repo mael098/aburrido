@@ -1,33 +1,55 @@
-// const fibonacci = (n) => {
-//     if(n<2) return n    //caso base
-//     return fibonacci(n-2) + fibonacci(n-1) //caso recursivo
-// }
-
-// const fibonacci = n => {
-//   const fib = [0, 1]
-//   for (let i = 2; i <= n; i++) {
-//     fib[i] = fib[i - 2] + fib[i - 1]
-//   }
-//   return fib[n]
-// }
-
-// console.time("fibo")
-// console.log(fibonacci(0))
-// console.log(fibonacci(1))
-// console.log(fibonacci(2))
-// console.log(fibonacci(3))
-// console.log(fibonacci(5))
-// console.log(fibonacci(8))
-// console.log(fibonacci(40))
-// console.timeEnd("fibo")
-
-
-function reverseWords(str) {
-    const array = str.split("")
-    const arrayREverse = array.reverse("")
-    return arrayREverse.join("")
+// function reverseWords(str) {
+//     const array = str.split("")
+//     const arrayREverse = array.reverse("")
+//     return arrayREverse.join("")
     
+// }
+
+// console.log("el resultado es: ", reverseWords("hola mundo"));
+
+class Pila {
+     constructor() {
+        this.pila1 = new Array()
+        this.pila2 = new Array()
+        this.pila3 = new Array()
+     }
+    PushPila1(elemento) {
+        return this.pila1.push(elemento)
+    }
+    PushPila2(elemento){
+        return this.pila2.push(elemento)
+
+    }
+    PushPila3(){
+        return this.pila3.push(this.pila2.pop())
+    }
+
+    mostrarPila1(){
+        return this.pila1
+    }
+    mostrarPila2(){
+        return this.pila2
+    }
+    mostrarPila3(){
+        return this.pila3
+    } 
+
 }
+const pila = new Pila()
 
-console.log("el resultado es: ", reverseWords("hola mundo"));
+pila.PushPila1(1)
+pila.PushPila1(2)
+pila.PushPila1(3)
 
+
+pila.PushPila2(4)
+pila.PushPila2(5)
+pila.PushPila2(7)
+
+pila.PushPila3(8)
+pila.PushPila3(9)
+pila.PushPila3(10)
+
+console.log(pila.mostrarPila1());
+console.log(pila.mostrarPila2());
+console.log(pila.mostrarPila3());

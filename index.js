@@ -53,6 +53,7 @@ pila.push(4);
 pila.push(5);
 pila.push(6);
 
+
 console.log("La pila está vacía:", pila.isEmpty());
 
 console.log("Elemento pop:", pila.pop());
