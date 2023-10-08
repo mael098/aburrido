@@ -1,5 +1,5 @@
 function elminarRepetido(lista, N) {
-    const reltado = []//
+    const reltado = []
     const conteo = {}
 
     for (const num of lista){
